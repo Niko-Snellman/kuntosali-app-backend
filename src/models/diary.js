@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+/*const mongoose = require("mongoose");
 
 const diarySchema = new mongoose.Schema({
   programId: {
@@ -45,4 +45,4 @@ const diarySchema = new mongoose.Schema({
 
 const Diary = mongoose.model("Diary", diarySchema);
 
-module.exports = Diary;
+module.exports = Diary;*/
