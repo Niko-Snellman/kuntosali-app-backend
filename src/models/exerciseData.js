@@ -1,19 +1,6 @@
 const mongoose = require("mongoose");
 
-const diarySchema = new mongoose.Schema({
-  programId: {
-    type: mongoose.Types.ObjectId,
-    required: true,
-    ref: "Program",
-  },
-  completionDate: {
-    type: Date,
-    required: true,
-  },
-  createdAt: {
-    type: Date,
-    required: true,
-  },
+const exerciseDataSchema = new mongoose.Schema({
   sets: {
     type: Number,
     required: false,
@@ -41,8 +28,12 @@ const diarySchema = new mongoose.Schema({
       }
     },
   },
+  completionDate: {
+    type: Date,
+    required: true,
+  },
 });
 
-const Diary = mongoose.model("Diary", diarySchema);
+const ExerciseData = mongoose.model("ExerciseData", exerciseDataSchema);
 
-module.exports = Diary;
+module.exports = ExerciseData;
