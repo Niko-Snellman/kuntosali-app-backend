@@ -31,4 +31,10 @@ router.post("/", (req, res, next) => {
     });
 });
 
+router.delete("/", (req, res, next) => {
+  console.log(req.body);
+
+  res.status(201).send({ terve: "maailma" });
+});
+
 module.exports = router;
