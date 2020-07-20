@@ -32,9 +32,17 @@ router.post("/", (req, res, next) => {
 });
 
 router.delete("/", (req, res, next) => {
-  console.log(req.body);
+  const id = req.body.id;
 
-  res.status(201).send({ terve: "maailma" });
+  Program.deleteOne({ _id: id }, (err, result) => {
+    if (err) {
+      console.log(err);
+      res.status(400).send(err);
+    } else {
+      console.log(result);
+      res.send(result);
+    }
+  });
 });
 
 module.exports = router;
